@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "dbconnectv2-poetry"
+version = "0.1.0"
+description = ""
+authors = ["Kimberly Mahoney <mahoneykimberlya@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pytest_poetry"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "7.2.2"
+python-decouple = "^3.8"
+pandas = "^1.5.3"
+numpy = "^1.24.2"
+databricks = {path = "databricks-0.0.2-py3-none-any.whl"}
+matplotlib = "^3.7.1"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.21.3"
+databricks-connect = {path = "databricks_connect-13.0.0-py2.py3-none-any.whl"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+run = "sparkpi.sparkPi:entry"
