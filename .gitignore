@@ -3,3 +3,9 @@
 .venv
 env/
 venv/
+
+#dbconnect and sdk wheels
+.whl
+
+
+.DS_Store
